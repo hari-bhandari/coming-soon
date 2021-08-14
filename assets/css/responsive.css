@@ -1,0 +1,102 @@
+@media only screen and (max-width: 767px) {
+  .coming-soon-content {
+    max-width: 100%;
+  }
+  .coming-soon-content h1 {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+  .coming-soon-content p {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+  .coming-soon-content #timer {
+    margin-top: 20px;
+  }
+  .coming-soon-content #timer div {
+    font-size: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .coming-soon-content #timer div span {
+    font-size: 14px;
+    margin-top: -5px;
+  }
+  .coming-soon-content #timer div::before {
+    display: none;
+  }
+  .coming-soon-content .newsletter-form {
+    margin-top: 35px;
+  }
+  .coming-soon-content .newsletter-form .input-newsletter {
+    height: 55px;
+    padding-left: 13px;
+    font-size: 15px;
+  }
+  .coming-soon-content .newsletter-form button {
+    position: relative;
+    height: auto;
+    padding: 14px 30px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 767px) {
+  .coming-soon-area {
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .coming-soon-content h1 {
+    font-size: 50px;
+  }
+  .coming-soon-content p {
+    font-size: 13.5px;
+  }
+  .coming-soon-content #timer {
+    margin-top: 20px;
+  }
+  .coming-soon-content #timer div {
+    font-size: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .coming-soon-content #timer div span {
+    font-size: 15px;
+    margin-top: -6px;
+  }
+  .coming-soon-content #timer div::before {
+    display: block;
+    right: -33px;
+    top: -5px;
+    font-size: 50px;
+  }
+  .coming-soon-content .newsletter-form .input-newsletter {
+    font-size: 16px;
+  }
+  .coming-soon-content .newsletter-form button {
+    position: absolute;
+    height: 55px;
+    padding: 0 30px;
+    font-size: 15px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .coming-soon-content h1 {
+    font-size: 65px;
+  }
+  .coming-soon-content #timer div {
+    font-size: 60px;
+  }
+  .coming-soon-content #timer div::before {
+    font-size: 65px;
+    right: -49px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

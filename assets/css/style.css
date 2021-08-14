@@ -1,0 +1,312 @@
+
+/*================================================
+Default CSS
+=================================================*/
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*================================================
+Preloader CSS
+=================================================*/
+.preloader {
+  position: fixed;
+  left: 0;
+  width: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 9999999;
+  background-color: #008bcf;
+}
+
+.preloader .spinner {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+          animation: sk-rotatePlane 1.2s infinite ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42%;
+  -webkit-transform: translateY(-42%);
+          transform: translateY(-42%);
+}
+
+@-webkit-keyframes sk-rotatePlane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@keyframes sk-rotatePlane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/*================================================
+Coming Soon CSS
+=================================================*/
+.coming-soon-area {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../../assets/img/main-bg.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.coming-soon-area::before {
+  content: '';
+  z-index: -1;
+  width: 100%;
+  height: 683px;
+  position: absolute;
+  right: 0;
+  top: 12%;
+  -webkit-animation: rotate3d 30s linear infinite;
+          animation: rotate3d 30s linear infinite;
+  background-image: url(../../assets/img/shape.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.coming-soon-area::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  opacity: .95;
+  background-image: url(../../assets/img/gradient-bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.coming-soon-content {
+  text-align: center;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coming-soon-content .logo {
+  margin-bottom: 20px;
+}
+.logo-image{
+  max-height: 200px;
+}
+.coming-soon-content .logo a {
+  display: inline-block;
+}
+
+.coming-soon-content h1 {
+  margin-bottom: 0;
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.coming-soon-content p {
+  color: #f3f3f3;
+  line-height: 1.8;
+  font-size: 14.5px;
+  max-width: 600px;
+  margin: 15px auto 0;
+}
+
+.coming-soon-content #timer {
+  margin-top: 30px;
+}
+
+.coming-soon-content #timer div {
+  display: inline-block;
+  color: #ffffff;
+  position: relative;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.coming-soon-content #timer div span {
+  display: block;
+  text-transform: lowercase;
+  margin-top: -15px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.coming-soon-content #timer div:last-child {
+  margin-right: 0;
+}
+
+.coming-soon-content #timer div:last-child::before {
+  display: none;
+}
+
+.coming-soon-content #timer div:first-child {
+  margin-left: 0;
+}
+
+.coming-soon-content #timer div::before {
+  content: ':';
+  position: absolute;
+  right: -50px;
+  top: -10px;
+  font-size: 70px;
+  color: #ffffff;
+}
+
+.coming-soon-content .newsletter-form {
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.coming-soon-content .newsletter-form .input-newsletter {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-left: 15px;
+  color: #ffffff;
+  outline: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.coming-soon-content .newsletter-form .input-newsletter::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.coming-soon-content .newsletter-form .input-newsletter:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.coming-soon-content .newsletter-form .input-newsletter::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.coming-soon-content .newsletter-form .input-newsletter::placeholder {
+  color: #ffffff;
+}
+
+.coming-soon-content .newsletter-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  background-color: #008bcf;
+  outline: 0;
+  color: #ffffff;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.coming-soon-content .newsletter-form button:hover {
+  color: #008bcf;
+  background-color: #ffffff;
+}
+
+.coming-soon-content .newsletter-form #validator-newsletter {
+  color: #ffffff;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes rotate3d {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

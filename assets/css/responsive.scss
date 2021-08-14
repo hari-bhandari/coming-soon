@@ -1,0 +1,147 @@
+$media: screen;
+$feature_min: min-width;
+$feature_max: max-width;
+$value_one: 576px;
+$value_two: 667px;
+$value_three: 767px;
+$value_four: 768px;
+$value_five: 991px;
+$value_six: 992px;
+$value_seven: 1199px;
+
+$main-color: #008bcf;
+$black-color: #000000;
+$white-color: #ffffff;
+
+@media only #{$media} and ($feature_max : $value_three) {
+    
+    .coming-soon-content {
+        max-width: 100%;
+
+        h1 {
+            font-size: 40px;
+            line-height: 1.1;
+        }
+        p {
+            font-size: 13px;
+            margin-top: 15px;
+        }
+        #timer {
+            margin-top: 20px;
+
+            div {
+                font-size: 40px;
+                margin: {
+                    left: 8px;
+                    right: 8px;
+                }
+                span {
+                    font-size: 14px;
+                    margin-top: -5px;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .newsletter-form {
+            margin-top: 35px;
+
+            .input-newsletter {
+                height: 55px;
+                padding-left: 13px;
+                font-size: 15px;
+            }
+            button {
+                position: relative;
+                height: auto;
+                padding: 14px 30px;
+                font-size: 14px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_two) and ($feature_max : $value_three) {
+
+    .coming-soon-area {
+        height: 100%;
+        padding: {
+            top: 120px;
+            bottom: 120px;
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_one) and ($feature_max : $value_three) {
+
+    .coming-soon-content {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 13.5px;
+        }
+        #timer {
+            margin-top: 20px;
+
+            div {
+                font-size: 50px;
+                margin: {
+                    left: 20px;
+                    right: 20px;
+                }
+                span {
+                    font-size: 15px;
+                    margin-top: -6px;
+                }
+                &::before {
+                    display: block;
+                    right: -33px;
+                    top: -5px;
+                    font-size: 50px;
+                }
+            }
+        }
+        .newsletter-form {
+            .input-newsletter {
+                font-size: 16px;
+            }
+            button {
+                position: absolute;
+                height: 55px;
+                padding: 0 30px;
+                font-size: 15px;
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_five) {
+    
+    .coming-soon-content {
+        h1 {
+            font-size: 65px;
+        }
+        #timer {
+            div {
+                font-size: 60px;
+
+                &::before {
+                    font-size: 65px;
+                    right: -49px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_six) and ($feature_max : $value_seven) {
+
+}

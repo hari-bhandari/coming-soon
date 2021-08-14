@@ -1,0 +1,288 @@
+/*
+@File: Emilono Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+** - Preloader CSS
+** - Coming Soon CSS
+*/
+
+/*================================================
+Default CSS
+=================================================*/
+@import url('https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+$main-font-family: 'Barlow', sans-serif;
+$main-color: #008bcf;
+$black-color: #000000;
+$white-color: #ffffff;
+$transition: .5s;
+
+body {
+    padding: 0;
+    margin: 0;
+    font: {
+        family: $main-font-family;
+    }
+}
+a {
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: $black-color;
+}
+img {
+    max-width: 100%;
+}
+
+/*================================================
+Preloader CSS
+=================================================*/
+.preloader {
+    position: fixed;
+    left: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 9999999;
+    background-color: $main-color;
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        background-color: $white-color;
+        margin: 0 auto;
+        animation: sk-rotatePlane 1.2s infinite ease-in-out;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 42%;
+        transform: translateY(-42%);
+    }
+}
+@keyframes sk-rotatePlane {
+    0% { 
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% { 
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    } 100% { 
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+/*================================================
+Coming Soon CSS
+=================================================*/
+.coming-soon-area {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+    background: {
+        image: url(../../assets/img/main-bg.jpeg);
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+    }
+    &::before {
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 683px;
+        position: absolute;
+        right: 0;
+        top: 12%;
+        animation: rotate3d 30s linear infinite;
+        background: {
+            image: url(../../assets/img/shape.png);
+            position: center center;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        opacity: .90;
+        background: {
+            image: url(../../assets/img/gradient-bg.png);
+            position: center center;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+}
+.coming-soon-content {
+    text-align: center;
+    max-width: 750px;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    .logo {
+        margin-bottom: 20px;
+        
+        a {
+            display: inline-block;
+        }
+    }
+    h1 {
+        margin-bottom: 0;
+        color: $white-color;
+        font: {
+            size: 80px;
+            weight: 700;
+        }
+    }
+    p {
+        color: #f3f3f3;
+        line-height: 1.8;
+        font-size: 14.5px;
+        max-width: 600px;
+        margin: {
+            top: 15px;
+            bottom: 0;
+            left: auto;
+            right: auto;
+        }
+    }
+    #timer {
+        margin: {
+            top: 30px;
+        }
+        div {
+            display: inline-block;
+            color: $white-color;
+            position: relative;
+            margin: {
+                left: 35px;
+                right: 35px;
+            }
+            font: {
+                size: 65px;
+                weight: 700;
+            }
+            span {
+                display: block;
+                text-transform: lowercase;
+                margin-top: -15px;
+                font: {
+                    size: 16px;
+                    weight: normal;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &::before {
+                content: ':';
+                position: absolute;
+                right: -50px;
+                top: -10px;
+                font-size: 70px;
+                color: $white-color;
+            }
+        }
+    }
+    .newsletter-form {
+        position: relative;
+        max-width: 500px;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 60px;
+        }
+        .input-newsletter {
+            display: block;
+            width: 100%;
+            height: 60px;
+            border: none;
+            background-color: rgba(255, 255, 255, .30);
+            padding-left: 15px;
+            color: $white-color;
+            outline: 0;
+            transition: $transition;
+
+            &::placeholder {
+                color: $white-color;
+            }
+        }
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 60px;
+            padding: 0 30px;
+            text-transform: uppercase;
+            background-color: $main-color;
+            outline: 0;
+            color: $white-color;
+            border: none;
+            transition: $transition;
+            font: {
+                weight: 600;
+                size: 15px;
+            }
+            &:hover {
+                color: $main-color;
+                background-color: $white-color;
+            }
+        }
+        #validator-newsletter {
+            color: $white-color;
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -30px;
+            margin: 0 auto;
+        }
+    }
+}
+@keyframes rotate3d {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
